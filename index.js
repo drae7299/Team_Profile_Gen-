@@ -1,11 +1,10 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
-
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const fs = require('fs');
+const inquirer = require('inquirer');
 
-employeeArray = [];
+empArray = [];
 
 const init = () => {
     inquirer.prompt([
@@ -57,16 +56,29 @@ const newManager = () => {
     });
 };
 
-const newMember = () => {
-    inquirer prompt ([
-        {
-            type: 'list',
-            message: 'Would you like to add to your team any further?'
-            choices: [
-                'Engineer',
-                'Intern',
-                'No thanks',
-            ]
-        }
-    ])
-}
+const newMember = () => { 
+
+    inquirer.prompt([ 
+
+        {  
+            type: 'list', 
+            message: 'Would you like to add any more additional new team members?', 
+            choices: [ 
+                'Engineer', 
+                'Intern', 
+                'No (Finish and exit the application)',
+            ], 
+            name: 'newMemberData' 
+        }, 
+    ]) .then((answers)) => {
+        switch (answers.newMemberData) { 
+            case 'Engineer': 
+                newEngineer(); 
+                break; 
+            case 'Intern': 
+                newIntern(); 
+                break; 
+            case 'No (Finish and exit the application)': 
+                generateTeam();
+                break; 
+        }; 
