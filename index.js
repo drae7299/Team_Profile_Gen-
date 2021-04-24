@@ -57,3 +57,16 @@ const newManager = () => {
     });
 };
 
+const newMember = () => {
+    inquirer prompt ([
+        {
+            type: 'list',
+            message: 'Would you like to add to your team any further?'
+            choices: [
+                'Engineer',
+                'Intern',
+                'No thanks',
+            ]
+        }
+    ])
+}
