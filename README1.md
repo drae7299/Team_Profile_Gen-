@@ -30,7 +30,7 @@
   ## Questions
 
   ## Demo
-  ![DemoLink](https://drive.google.com/file/d/1cPT0C72wNoRB2yf-W0mWeq8T4Hu5o1nP/view?usp=sharing)
+  [DemoLink](https://drive.google.com/file/d/1cPT0C72wNoRB2yf-W0mWeq8T4Hu5o1nP/view?usp=sharing)
 
 
   Reach out to me via Github if there are any questions! Otherwise use my email!:
